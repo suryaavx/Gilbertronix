@@ -661,39 +661,181 @@ body::before {
     transition: transform 0.3s ease, opacity 0.3s ease !important;
 }
 
+/* Comprehensive Mobile Optimizations */
 @media (max-width: 768px) {
     #main-header {
-        background: rgba(0, 0, 0, 0.05);
-        border-radius: 0 0 25px 25px;
-        margin: 0 4px;
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        background: rgba(0, 0, 0, 0.1) !important;
+        border-radius: 0 0 25px 25px !important;
+        margin: 0 4px !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+        border-bottom: 1px solid rgba(240, 147, 251, 0.2) !important;
+    }
+    
+    #main-header::before {
+        border-radius: 0 0 25px 25px !important;
+        background: linear-gradient(135deg, 
+            rgba(240, 147, 251, 0.05) 0%, 
+            rgba(102, 126, 234, 0.05) 50%, 
+            rgba(79, 172, 254, 0.05) 100%) !important;
+    }
+    
+    .header-scrolled {
+        background: rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
     }
     
     .elegant-card {
-        padding: 1.5rem;
-        border-radius: 15px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        padding: 1.5rem !important;
+        border-radius: 20px !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
     
     .elegant-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-3px) !important;
+        box-shadow: 0 6px 20px rgba(240, 147, 251, 0.2) !important;
+        border-color: rgba(240, 147, 251, 0.3) !important;
     }
     
     .mobile-menu {
-        border-radius: 0 0 15px 15px;
-        margin: 0 4px;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.9) !important;
+        border-radius: 0 0 20px 20px !important;
+        margin: 0 4px !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(240, 147, 251, 0.2) !important;
+        border-top: none !important;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4) !important;
+    }
+    
+    .mobile-menu-btn {
+        width: 48px !important;
+        height: 48px !important;
+        background: rgba(240, 147, 251, 0.1) !important;
+        border: 1px solid rgba(240, 147, 251, 0.3) !important;
+        border-radius: 15px !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+    }
+    
+    .mobile-menu-btn:hover {
+        background: rgba(240, 147, 251, 0.2) !important;
+        border-color: rgba(240, 147, 251, 0.5) !important;
+        transform: scale(1.05) !important;
+    }
+    
+    .mobile-menu-link {
+        padding: 1rem 1.5rem !important;
+        border-radius: 15px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        background: transparent !important;
+    }
+    
+    .mobile-menu-link:hover {
+        background: rgba(240, 147, 251, 0.1) !important;
+        color: #f093fb !important;
+        transform: translateX(5px) !important;
+        border: 1px solid rgba(240, 147, 251, 0.3) !important;
+    }
+    
+    .mobile-menu-link.active {
+        background: rgba(240, 147, 251, 0.15) !important;
+        color: #f093fb !important;
+        border: 1px solid rgba(240, 147, 251, 0.4) !important;
     }
     
     .text-glow {
-        text-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+        color: #f093fb !important;
+        text-shadow: 0 0 15px rgba(240, 147, 251, 0.6) !important;
+    }
+    
+    .text-primary {
+        color: #f093fb !important;
+        text-shadow: 0 0 10px rgba(240, 147, 251, 0.4) !important;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        border-radius: 12px !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .nav-link:hover {
+        background: rgba(240, 147, 251, 0.1) !important;
+        color: #f093fb !important;
+    }
+    
+    .nav-link.active {
+        background: rgba(240, 147, 251, 0.15) !important;
+        color: #f093fb !important;
+    }
+    
+    /* Fix button styles for mobile */
+    .btn-elegant {
+        padding: 1rem 2rem !important;
+        border-radius: 25px !important;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+        color: #fff !important;
+        box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4) !important;
+    }
+    
+    .btn-elegant:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(240, 147, 251, 0.6) !important;
+    }
+}
+/* Mobile Viewport and Touch Optimizations */
+@media (max-width: 480px) {
+    #main-header {
+        margin: 0 2px !important;
+        border-radius: 0 0 20px 20px !important;
+    }
+    
+    .mobile-menu {
+        margin: 0 2px !important;
+        border-radius: 0 0 15px 15px !important;
+    }
+    
+    .elegant-card {
+        margin: 0.5rem !important;
+        padding: 1rem !important;
+    }
+    
+    .mobile-menu-btn {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        touch-action: manipulation !important;
+    }
+    
+    .mobile-menu-link {
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        touch-action: manipulation !important;
+    }
+    
+    .nav-link {
+        min-height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        touch-action: manipulation !important;
     }
 }
 
-/* Force hardware acceleration for critical elements only */
+/* Ensure proper mobile support */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 #main-header, .mobile-menu {
     transform: translate3d(0, 0, 0);
     will-change: transform;

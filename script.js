@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Ultra-Optimized Mobile Menu
+    // Enhanced Mobile Menu for Better Mobile Support
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const hamburger = document.getElementById('hamburger');
@@ -102,27 +102,41 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleMenu = () => {
         isMenuOpen = !isMenuOpen;
         
-        // Simple toggle without heavy animations
+        // Enhanced mobile menu toggle
         mobileMenu.classList.toggle('opacity-0');
         mobileMenu.classList.toggle('-translate-y-full');
         
-        if (hamburger) hamburger.classList.toggle('active');
+        // Hamburger animation
+        if (hamburger) {
+            hamburger.classList.toggle('active');
+        }
         mobileMenuButton.classList.toggle('active');
         
-        // Minimal menu item animation
+        // Better mobile handling
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
             mobileMenu.style.transform = 'translateY(0)';
             mobileMenu.style.opacity = '1';
+            mobileMenu.style.zIndex = '9999';
         } else {
             document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
             mobileMenu.style.transform = 'translateY(-100%)';
             mobileMenu.style.opacity = '0';
         }
     };
     
-    // Enhanced mobile menu button click
-    mobileMenuButton.addEventListener('click', toggleMenu);
+    // Enhanced mobile menu button click with touch support
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        mobileMenuButton.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        }, { passive: false });
+    }
     
     // Close menu when clicking on links
     document.querySelectorAll('.mobile-link').forEach(link => {
