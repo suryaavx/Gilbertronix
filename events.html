@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - GILBERTRONIX'2K25 | P.S.R. Engineering College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+    <canvas id="bg-globe"></canvas>
+    <!-- Enhanced Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="font-orbitron text-lg sm:text-xl font-bold text-primary tracking-wider logo-hover">
+                <a href="index.html">GILBERTRONIX'2K25</a>
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-2 lg:space-x-6 text-secondary font-medium">
+                <a href="index.html" class="nav-link hover:text-primary">Home</a>
+                <a href="about.html" class="nav-link hover:text-primary">About</a>
+                <a href="events.html" class="nav-link active text-primary">Events</a>
+                <a href="schedule.html" class="nav-link hover:text-primary">Schedule</a>
+                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="nav-link hover:text-primary" target="_blank">Register</a>
+                <a href="contact.html" class="nav-link hover:text-primary">Contact</a>
+            </div>
+            
+            <!-- Enhanced Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden mobile-menu-btn focus:outline-none" aria-label="Toggle mobile menu">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden mobile-menu absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0 transition-all duration-300 ease-out">
+            <div class="container mx-auto px-6 py-6">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🏠 Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">ℹ️ About</span>
+                    </a>
+                    <a href="events.html" class="mobile-menu-link active text-primary mobile-link">
+                        <span class="block">🎯 Events</span>
+                    </a>
+                    <a href="schedule.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📅 Schedule</span>
+                    </a>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="mobile-menu-link hover:text-primary mobile-link" target="_blank">
+                        <span class="block">📝 Register</span>
+                    </a>
+                    <a href="contact.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📞 Contact</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile CTA -->
+                <div class="mt-6 pt-4 border-t border-cyan-400/20">
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-lg hover:shadow-cyan-500/25">
+                        🚀 Register Now - ₹250
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Events Section -->
+        <section class="py-24 px-4 relative z-10">
+            <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold text-center mb-20 text-glow reveal">Symposium Events</h2>
+            <div class="container mx-auto">
+                <div class="mb-20 reveal">
+                    <h3 class="font-orbitron text-3xl font-semibold text-center mb-12 text-primary">🎯 Technical Events</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <!-- Impulse Hub -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Impulse Hub</h4>
+                            <p class="text-secondary mb-4">Paper Presentation</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Present your innovative research ideas and technical solutions. Showcase your academic prowess and compete with the brightest minds.
+                            </p>
+                        </div>
+
+                        <!-- Ohm Quest -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Ohm Quest</h4>
+                            <p class="text-secondary mb-4">Tech Quiz</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Test your technical knowledge in this exciting quiz competition covering electrical engineering concepts and current technology trends.
+                            </p>
+                        </div>
+
+                        <!-- Creator's Corner -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2 1m0 0l-2-1m2 1v2.5M3 12l2-1m0 0l2 1m-2-1v-2.5M3 16l2-1m0 0l2 1m-2-1v-2.5M9 19l2-1m0 0l2 1m-2-1v-2.5M15 19l2-1m0 0l2 1m-2-1v-2.5" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Creator's Corner</h4>
+                            <p class="text-secondary mb-4">Project Expo</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Display your innovative projects and prototypes. Demonstrate practical applications of engineering principles and creativity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <h3 class="font-orbitron text-3xl font-semibold text-center mb-12 text-primary">🎭 Non-Technical Events</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <!-- Cinema Cipher -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Cinema Cipher</h4>
+                            <p class="text-secondary mb-4">Movie Based Event</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                A fun-filled movie-based competition testing your knowledge of cinema, characters, and storylines across different genres.
+                            </p>
+                        </div>
+
+                        <!-- Memory Matrix -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V8a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Memory Matrix</h4>
+                            <p class="text-secondary mb-4">Memory Game</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Challenge your memory skills in this engaging game that tests your ability to remember patterns, sequences, and information.
+                            </p>
+                        </div>
+
+                        <!-- Silent Signals -->
+                        <div class="elegant-card p-8 text-center interactive-card">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a14.98 14.98 0 00-5.84-2.56m0 0a14.98 14.98 0 00-5.84 2.56m5.84-2.56V4.72a6 6 0 0111.68 0v2.22m-11.68 4.82a14.983 14.983 0 01-5.84-2.56M3.41 14.37a6 6 0 015.84 7.38v-4.82" />
+                                </svg>
+                            </div>
+                            <h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Silent Signals</h4>
+                            <p class="text-secondary mb-4">Dumb Charades</p>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Express yourself without words! Test your acting skills and communication abilities in this classic game of gestures and expressions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Rules Section -->
+                <div class="mt-20 reveal">
+                    <div class="elegant-card max-w-4xl mx-auto">
+                        <h3 class="font-orbitron text-3xl font-bold text-center mb-8 text-glow">General Event Rules</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-orbitron text-xl font-semibold text-primary mb-4">Participation Guidelines</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li>• Registration is mandatory for all participants</li>
+                                    <li>• Valid student ID required for verification</li>
+                                    <li>• Team size varies by event (check specific rules)</li>
+                                    <li>• Late entries will not be accepted</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-orbitron text-xl font-semibold text-primary mb-4">Competition Rules</h4>
+                                <ul class="space-y-2 text-secondary">
+                                    <li>• Judges' decision will be final</li>
+                                    <li>• Plagiarism will lead to disqualification</li>
+                                    <li>• Time limits must be strictly followed</li>
+                                    <li>• Winners will be announced on the same day</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Section -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-3xl text-center">
+                <div class="elegant-card reveal">
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Ready to Compete?</h2>
+                    <p class="text-lg text-secondary leading-relaxed max-w-xl mx-auto mb-8">
+                        Choose your events and register now. Don't miss this opportunity to showcase your talents and win exciting prizes!
+                    </p>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="btn-elegant text-lg uppercase">
+                        Register Now
+                    </a>
+                    <p class="text-secondary mt-4">Registration Fee: ₹250/- | Deadline: October 6, 2025</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/10 relative z-10">
+        <div class="container mx-auto px-6 text-center text-secondary">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/gilbertronix_2k25/" target="_blank" class="text-2xl text-secondary hover:text-primary transition-colors">
+                    <svg class="inline-block w-7 h-7" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.927 3.927 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 4.438a3.562 3.562 0 1 0 0 7.124 3.562 3.562 0 0 0 0-7.124zM8 10.312a2.312 2.312 0 1 1 0-4.624 2.312 2.312 0 0 1 0 4.624zM12.375 3.625a.938.938 0 1 1-1.875 0 .938.938 0 0 1 1.875 0z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 GILBERTRONIX'2K25. All Rights Reserved. P.S.R. Engineering College.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

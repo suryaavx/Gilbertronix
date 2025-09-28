@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GILBERTRONIX'2K25 | P.S.R. Engineering College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+    <canvas id="bg-globe"></canvas>
+    <!-- Enhanced Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="font-orbitron text-lg sm:text-xl font-bold text-primary tracking-wider logo-hover">
+                <a href="index.html">GILBERTRONIX'2K25</a>
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-2 lg:space-x-6 text-secondary font-medium">
+                <a href="index.html" class="nav-link hover:text-primary">Home</a>
+                <a href="about.html" class="nav-link hover:text-primary">About</a>
+                <a href="events.html" class="nav-link hover:text-primary">Events</a>
+                <a href="schedule.html" class="nav-link hover:text-primary">Schedule</a>
+                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="nav-link hover:text-primary" target="_blank">Register</a>
+                <a href="contact.html" class="nav-link active text-primary">Contact</a>
+            </div>
+            
+            <!-- Enhanced Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden mobile-menu-btn focus:outline-none" aria-label="Toggle mobile menu">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden mobile-menu absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0 transition-all duration-300 ease-out">
+            <div class="container mx-auto px-6 py-6">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🏠 Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">ℹ️ About</span>
+                    </a>
+                    <a href="events.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🎯 Events</span>
+                    </a>
+                    <a href="schedule.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📅 Schedule</span>
+                    </a>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="mobile-menu-link hover:text-primary mobile-link" target="_blank">
+                        <span class="block">📝 Register</span>
+                    </a>
+                    <a href="contact.html" class="mobile-menu-link active text-primary mobile-link">
+                        <span class="block">📞 Contact</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile CTA -->
+                <div class="mt-6 pt-4 border-t border-cyan-400/20">
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-lg hover:shadow-cyan-500/25">
+                        🚀 Register Now - ₹250
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Contact Header -->
+        <section class="py-12 px-4 relative z-10">
+            <div class="container mx-auto text-center">
+                <div class="max-w-3xl mx-auto reveal">
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Contact Us</h2>
+                    <p class="text-lg text-secondary leading-relaxed">
+                        Have questions about GILBERTRONIX'2K25? Need more information? We're here to help! 
+                        Reach out to our coordinators for any queries or assistance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-5xl">
+                <!-- Coordinators -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Faculty Coordinators -->
+                    <div class="elegant-card p-8 reveal">
+                        <div class="text-center mb-6">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-orbitron text-2xl font-bold text-primary mb-6">Faculty Coordinators</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Dr. A. Geetha</h4>
+                                <p class="text-secondary">M.E., Ph.D</p>
+                                <p class="text-sm text-secondary mt-2">Head of Department</p>
+                            </div>
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Mr. S. Ramaraj</h4>
+                                <p class="text-secondary">M.E.</p>
+                                <p class="text-sm text-secondary mt-2">Assistant Professor</p>
+                            </div>
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Mr. P. Sarath Chandran</h4>
+                                <p class="text-secondary">M.E.</p>
+                                <p class="text-sm text-secondary mt-2">Assistant Professor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student Coordinators -->
+                    <div class="elegant-card p-8 reveal">
+                        <div class="text-center mb-6">
+                            <div class="text-cyan-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <h3 class="font-orbitron text-2xl font-bold text-primary mb-6">Student Coordinators</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Mr. E. Dharanivasan</h4>
+                                <p class="text-secondary">Final Year EEE</p>
+                                <p class="text-sm text-secondary mt-2">Event Coordinator</p>
+                            </div>
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Mr. B. Vishva</h4>
+                                <p class="text-secondary">Final Year EEE</p>
+                                <p class="text-sm text-secondary mt-2">Technical Coordinator</p>
+                            </div>
+                            <div class="bg-black/30 rounded-lg p-4">
+                                <h4 class="font-semibold text-primary text-lg">Ms. P. Madhumathi</h4>
+                                <p class="text-secondary">Final Year EEE</p>
+                                <p class="text-sm text-secondary mt-2">Registration Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- Email -->
+                    <div class="elegant-card p-6 text-center reveal">
+                        <div class="text-cyan-400 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-orbitron text-xl font-bold text-primary mb-3">Email Us</h4>
+                        <a href="mailto:gilbertronix2k25@gmail.com" class="text-secondary hover:text-primary transition-colors break-all">
+                            gilbertronix2k25@gmail.com
+                        </a>
+                        <p class="text-sm text-secondary mt-3">
+                            For general inquiries and registration support
+                        </p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="elegant-card p-6 text-center reveal">
+                        <div class="text-cyan-400 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <h4 class="font-orbitron text-xl font-bold text-primary mb-3">Call Us</h4>
+                        <div class="space-y-2">
+                            <p class="text-secondary">
+                                <a href="tel:+916262676775" class="hover:text-primary transition-colors">6262676775</a>
+                            </p>
+                            <p class="text-secondary">
+                                <a href="tel:+917010160315" class="hover:text-primary transition-colors">7010160315</a>
+                            </p>
+                        </div>
+                        <p class="text-sm text-secondary mt-3">
+                            Available during college hours
+                        </p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="elegant-card p-6 text-center reveal">
+                        <div class="text-cyan-400 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.927 3.927 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 4.438a3.562 3.562 0 1 0 0 7.124 3.562 3.562 0 0 0 0-7.124zM8 10.312a2.312 2.312 0 1 1 0-4.624 2.312 2.312 0 0 1 0 4.624zM12.375 3.625a.938.938 0 1 1-1.875 0 .938.938 0 0 1 1.875 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-orbitron text-xl font-bold text-primary mb-3">Follow Us</h4>
+                        <a href="https://www.instagram.com/gilbertronix_2k25/" target="_blank" class="text-secondary hover:text-primary transition-colors">
+                            @gilbertronix_2k25
+                        </a>
+                        <p class="text-sm text-secondary mt-3">
+                            Latest updates and announcements
+                        </p>
+                    </div>
+                </div>
+
+                <!-- College Information -->
+                <div class="elegant-card reveal">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-orbitron text-2xl font-bold text-primary mb-4">P.S.R. Engineering College</h3>
+                            <div class="space-y-3 text-secondary">
+                                <p class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Sivakasi, Tamil Nadu, India
+                                </p>
+                                <p class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                    Department of Electrical and Electronics Engineering
+                                </p>
+                                <p class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Office Hours: 9:00 AM - 5:00 PM (Monday to Friday)
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron text-lg font-semibold text-primary mb-4">Quick Information</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-black/30 rounded-lg p-3 text-center">
+                                    <p class="font-orbitron text-xl font-bold text-primary">Oct 8</p>
+                                    <p class="text-xs text-secondary">Event Date</p>
+                                </div>
+                                <div class="bg-black/30 rounded-lg p-3 text-center">
+                                    <p class="font-orbitron text-xl font-bold text-primary">₹250</p>
+                                    <p class="text-xs text-secondary">Registration Fee</p>
+                                </div>
+                                <div class="bg-black/30 rounded-lg p-3 text-center">
+                                    <p class="font-orbitron text-xl font-bold text-primary">6</p>
+                                    <p class="text-xs text-secondary">Events</p>
+                                </div>
+                                <div class="bg-black/30 rounded-lg p-3 text-center">
+                                    <p class="font-orbitron text-xl font-bold text-primary">Oct 6</p>
+                                    <p class="text-xs text-secondary">Last Date</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="mt-16 elegant-card reveal">
+                    <h3 class="font-orbitron text-2xl font-bold text-center mb-8 text-glow">Frequently Asked Questions</h3>
+                    <div class="space-y-6">
+                        <div class="bg-black/30 rounded-lg p-6">
+                            <h4 class="font-semibold text-primary mb-2">How do I register for the events?</h4>
+                            <p class="text-secondary text-sm">
+                                Click on the "Register Now" button and fill out the Google Form with all required details. Payment instructions will be provided after form submission.
+                            </p>
+                        </div>
+                        <div class="bg-black/30 rounded-lg p-6">
+                            <h4 class="font-semibold text-primary mb-2">Can I participate in multiple events?</h4>
+                            <p class="text-secondary text-sm">
+                                Yes! You can register for multiple events. However, please check the schedule to ensure there are no timing conflicts between your chosen events.
+                            </p>
+                        </div>
+                        <div class="bg-black/30 rounded-lg p-6">
+                            <h4 class="font-semibold text-primary mb-2">What should I bring on the event day?</h4>
+                            <p class="text-secondary text-sm">
+                                Bring your valid student ID, registration confirmation, and any specific materials required for your events. Detailed requirements will be sent via email after registration.
+                            </p>
+                        </div>
+                        <div class="bg-black/30 rounded-lg p-6">
+                            <h4 class="font-semibold text-primary mb-2">Is lunch and refreshments provided?</h4>
+                            <p class="text-secondary text-sm">
+                                Yes! Lunch and refreshments are included in the registration fee. All participants will receive complimentary meals during the event.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Section -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-3xl text-center">
+                <div class="elegant-card reveal">
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Still Have Questions?</h2>
+                    <p class="text-lg text-secondary leading-relaxed max-w-xl mx-auto mb-8">
+                        Don't hesitate to reach out! We're here to help make your GILBERTRONIX'2K25 experience amazing.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="mailto:gilbertronix2k25@gmail.com" class="btn-elegant text-lg uppercase">
+                            Send Email
+                        </a>
+                        <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full transition-all duration-300 text-lg uppercase">
+                            Register Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/10 relative z-10">
+        <div class="container mx-auto px-6 text-center text-secondary">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/gilbertronix_2k25/" target="_blank" class="text-2xl text-secondary hover:text-primary transition-colors">
+                    <svg class="inline-block w-7 h-7" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.927 3.927 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 4.438a3.562 3.562 0 1 0 0 7.124 3.562 3.562 0 0 0 0-7.124zM8 10.312a2.312 2.312 0 1 1 0-4.624 2.312 2.312 0 0 1 0 4.624zM12.375 3.625a.938.938 0 1 1-1.875 0 .938.938 0 0 1 1.875 0z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 GILBERTRONIX'2K25. All Rights Reserved. P.S.R. Engineering College.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

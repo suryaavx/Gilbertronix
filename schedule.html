@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - GILBERTRONIX'2K25 | P.S.R. Engineering College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+    <canvas id="bg-globe"></canvas>
+    <!-- Enhanced Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="font-orbitron text-lg sm:text-xl font-bold text-primary tracking-wider logo-hover">
+                <a href="index.html">GILBERTRONIX'2K25</a>
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-2 lg:space-x-6 text-secondary font-medium">
+                <a href="index.html" class="nav-link hover:text-primary">Home</a>
+                <a href="about.html" class="nav-link hover:text-primary">About</a>
+                <a href="events.html" class="nav-link hover:text-primary">Events</a>
+                <a href="schedule.html" class="nav-link active text-primary">Schedule</a>
+                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="nav-link hover:text-primary" target="_blank">Register</a>
+                <a href="contact.html" class="nav-link hover:text-primary">Contact</a>
+            </div>
+            
+            <!-- Enhanced Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden mobile-menu-btn focus:outline-none" aria-label="Toggle mobile menu">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden mobile-menu absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0 transition-all duration-300 ease-out">
+            <div class="container mx-auto px-6 py-6">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🏠 Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">ℹ️ About</span>
+                    </a>
+                    <a href="events.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🎯 Events</span>
+                    </a>
+                    <a href="schedule.html" class="mobile-menu-link active text-primary mobile-link">
+                        <span class="block">📅 Schedule</span>
+                    </a>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="mobile-menu-link hover:text-primary mobile-link" target="_blank">
+                        <span class="block">📝 Register</span>
+                    </a>
+                    <a href="contact.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📞 Contact</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile CTA -->
+                <div class="mt-6 pt-4 border-t border-cyan-400/20">
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-lg hover:shadow-cyan-500/25">
+                        🚀 Register Now - ₹250
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Event Date Header -->
+        <section class="py-12 px-4 relative z-10">
+            <div class="container mx-auto text-center">
+                <div class="elegant-card max-w-2xl mx-auto reveal">
+                    <h2 class="font-orbitron text-2xl md:text-3xl font-bold text-glow mb-4">Event Date</h2>
+                    <p class="font-orbitron text-4xl md:text-5xl font-extrabold text-primary">October 8, 2025</p>
+                    <p class="text-lg text-secondary mt-2">Wednesday</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="py-24 px-4 relative z-10">
+            <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold text-center mb-20 text-glow reveal">Event Schedule</h2>
+            <div class="container mx-auto max-w-4xl">
+                <div class="relative border-l-2 border-white/10 ml-5">
+                    <div class="space-y-12">
+                        <!-- Registration -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">9:00 AM - 9:30 AM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Registration & Welcome</h4>
+                                <p class="text-secondary">
+                                    Participants arrive and complete registration process. Welcome refreshments will be served. 
+                                    Collect event materials and participant kits.
+                                </p>
+                                <div class="mt-3">
+                                    <span class="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
+                                        📝 Bring Valid ID
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inaugural Function -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">9:30 AM - 10:10 AM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Inaugural Function</h4>
+                                <p class="text-secondary">
+                                    Official opening ceremony with welcome address by dignitaries, keynote speeches, 
+                                    and lamp lighting ceremony to mark the beginning of GILBERTRONIX'2K25.
+                                </p>
+                                <div class="mt-3">
+                                    <span class="inline-block bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">
+                                        🎤 Chief Guest Address
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tea Break -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">10:10 AM - 10:40 AM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Networking Tea Break</h4>
+                                <p class="text-secondary">
+                                    Refreshment break for participants to network, interact with peers, 
+                                    and prepare for the upcoming technical competitions.
+                                </p>
+                                <div class="mt-3">
+                                    <span class="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+                                        ☕ Refreshments Provided
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Events -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">10:40 AM - 1:00 PM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Technical Events</h4>
+                                <p class="text-secondary mb-4">
+                                    Simultaneous conduct of all technical competitions. Participants will compete 
+                                    in their registered events across different venues.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Impulse Hub</h5>
+                                        <p class="text-xs text-secondary">Paper Presentation</p>
+                                        <p class="text-xs text-secondary">Venue: Seminar Hall</p>
+                                    </div>
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Ohm Quest</h5>
+                                        <p class="text-xs text-secondary">Technical Quiz</p>
+                                        <p class="text-xs text-secondary">Venue: Classroom A</p>
+                                    </div>
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Creator's Corner</h5>
+                                        <p class="text-xs text-secondary">Project Expo</p>
+                                        <p class="text-xs text-secondary">Venue: Lab Complex</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lunch Break -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">1:00 PM - 2:00 PM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Lunch Break</h4>
+                                <p class="text-secondary">
+                                    Delicious lunch will be served to all participants and guests. 
+                                    Take this time to relax and recharge for the afternoon events.
+                                </p>
+                                <div class="mt-3">
+                                    <span class="inline-block bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-sm">
+                                        🍽️ Complimentary Lunch
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Non-Technical Events -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">2:00 PM - 3:00 PM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Non-Technical Events</h4>
+                                <p class="text-secondary mb-4">
+                                    Fun-filled non-technical competitions to showcase creativity and entertainment skills. 
+                                    All participants can join these engaging activities.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Cinema Cipher</h5>
+                                        <p class="text-xs text-secondary">Movie Based Event</p>
+                                        <p class="text-xs text-secondary">Venue: Auditorium</p>
+                                    </div>
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Memory Matrix</h5>
+                                        <p class="text-xs text-secondary">Memory Game</p>
+                                        <p class="text-xs text-secondary">Venue: Classroom B</p>
+                                    </div>
+                                    <div class="bg-black/40 rounded p-3">
+                                        <h5 class="font-semibold text-cyan-400">Silent Signals</h5>
+                                        <p class="text-xs text-secondary">Dumb Charades</p>
+                                        <p class="text-xs text-secondary">Venue: Activity Hall</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Valedictory Function -->
+                        <div class="pl-12 timeline-item reveal">
+                            <div class="bg-black/30 rounded-lg p-6">
+                                <p class="font-orbitron text-lg text-secondary mb-2">3:00 PM - 3:30 PM</p>
+                                <h4 class="text-2xl font-bold text-primary mb-3">Valedictory Function</h4>
+                                <p class="text-secondary">
+                                    Grand closing ceremony featuring prize distribution, winner announcements, 
+                                    vote of thanks, and memorable photo sessions with winners and participants.
+                                </p>
+                                <div class="mt-3 space-x-2">
+                                    <span class="inline-block bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">
+                                        🏆 Prize Distribution
+                                    </span>
+                                    <span class="inline-block bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-sm">
+                                        📸 Photo Session
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Notes -->
+        <section class="py-12 px-4 relative z-10">
+            <div class="container mx-auto max-w-4xl">
+                <div class="elegant-card reveal">
+                    <h3 class="font-orbitron text-2xl font-bold text-center mb-8 text-glow">Important Guidelines</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-orbitron text-lg font-semibold text-primary mb-4">⏰ Timing Guidelines</h4>
+                            <ul class="space-y-2 text-secondary text-sm">
+                                <li>• Please arrive 15 minutes before your event time</li>
+                                <li>• Late arrivals may result in disqualification</li>
+                                <li>• All timings are strictly followed</li>
+                                <li>• Buffer time included for smooth transitions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron text-lg font-semibold text-primary mb-4">📋 What to Bring</h4>
+                            <ul class="space-y-2 text-secondary text-sm">
+                                <li>• Valid student ID card (mandatory)</li>
+                                <li>• Registration confirmation receipt</li>
+                                <li>• Required materials for your events</li>
+                                <li>• Positive attitude and enthusiasm!</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron text-lg font-semibold text-primary mb-4">🏢 Venue Information</h4>
+                            <ul class="space-y-2 text-secondary text-sm">
+                                <li>• Detailed venue map available at registration</li>
+                                <li>• Volunteers will guide participants</li>
+                                <li>• All venues are within the college campus</li>
+                                <li>• Parking available for participants</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-orbitron text-lg font-semibold text-primary mb-4">🎯 Competition Rules</h4>
+                            <ul class="space-y-2 text-secondary text-sm">
+                                <li>• Fair play and sportsmanship expected</li>
+                                <li>• Mobile phones to be kept on silent</li>
+                                <li>• Follow judge instructions carefully</li>
+                                <li>• Results will be announced promptly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Section -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-3xl text-center">
+                <div class="elegant-card reveal">
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Mark Your Calendar!</h2>
+                    <p class="text-lg text-secondary leading-relaxed max-w-xl mx-auto mb-8">
+                        Don't miss this exciting day of technical excellence and fun activities. Register now to secure your spot!
+                    </p>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="btn-elegant text-lg uppercase">
+                        Register Now
+                    </a>
+                    <p class="text-secondary mt-4">Registration Deadline: October 6, 2025</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/10 relative z-10">
+        <div class="container mx-auto px-6 text-center text-secondary">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/gilbertronix_2k25/" target="_blank" class="text-2xl text-secondary hover:text-primary transition-colors">
+                    <svg class="inline-block w-7 h-7" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372.526-.205.972-.478 1.417-.923.445-.444.718-.891.923-1.417.198-.509.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.927 3.927 0 0 0-.923-1.417A3.927 3.927 0 0 0 13.24.42c-.51-.198-1.09-.333-1.942-.372C10.445.01 10.173 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 4.438a3.562 3.562 0 1 0 0 7.124 3.562 3.562 0 0 0 0-7.124zM8 10.312a2.312 2.312 0 1 1 0-4.624 2.312 2.312 0 0 1 0 4.624zM12.375 3.625a.938.938 0 1 1-1.875 0 .938.938 0 0 1 1.875 0z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 GILBERTRONIX'2K25. All Rights Reserved. P.S.R. Engineering College.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

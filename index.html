@@ -9,171 +9,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Base Styling */
-        :root {
-            --accent-color: #00ffff; /* Cyan Accent */
-            --accent-color-rgb: 0, 255, 255;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #000;
-            color: #FFFFFF;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        
-        #bg-globe {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        /* Elegant Card Style */
-        .elegant-card {
-            background: rgba(17, 17, 17, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            transition: all 0.3s ease-in-out;
-            padding: 2.5rem;
-            transform-style: preserve-3d;
-        }
-
-        .elegant-card:hover {
-            border-color: rgba(var(--accent-color-rgb), 0.5);
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(var(--accent-color-rgb), 0.1);
-        }
-        
-        /* Accent Text Glow */
-        .text-glow {
-            text-shadow: 0 0 15px rgba(var(--accent-color-rgb), 0.5), 0 0 30px rgba(var(--accent-color-rgb), 0.2);
-        }
-        
-        .text-primary { color: #FFFFFF; }
-        .text-secondary { color: #a1a1a6; }
-
-        /* Elegant Button Style */
-        .btn-elegant {
-            background: var(--accent-color);
-            color: #000;
-            font-weight: 700;
-            border-radius: 9999px;
-            padding: 1rem 2.5rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            letter-spacing: 0.5px;
-            box-shadow: 0 0 20px rgba(var(--accent-color-rgb), 0.4);
-        }
-
-        .btn-elegant:hover {
-            background: #fff;
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(var(--accent-color-rgb), 0.5);
-        }
-        
-        /* Timeline Styling */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -33px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: #000;
-            border: 5px solid #a1a1a6;
-            z-index: 1;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0.5);
-        }
-
-        .timeline-item.is-visible::before {
-            border-color: var(--accent-color);
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0.5); }
-            70% { box-shadow: 0 0 0 10px rgba(var(--accent-color-rgb), 0); }
-            100% { box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0); }
-        }
-        
-        /* Header animation */
-        .header-scrolled {
-            background: rgba(0, 0, 0, 0.7) !important;
-            backdrop-filter: blur(15px) !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #111; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
-        
-        /* JS-driven Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Map Styling */
-        .map-container {
-            border-radius: 16px;
-            overflow: hidden;
-            height: 450px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .map-container iframe {
-            filter: invert(1) hue-rotate(180deg);
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased">
     <canvas id="bg-globe"></canvas>
-    <!-- Header -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
-            <h1 class="font-orbitron text-xl font-bold text-primary tracking-wider">GILBERTRONIX'2K25</h1>
-            <div class="hidden md:flex items-center space-x-10 text-secondary font-medium">
-                <a href="#about" class="hover:text-primary transition-colors">About</a>
-                <a href="#events" class="hover:text-primary transition-colors">Events</a>
-                <a href="#schedule" class="hover:text-primary transition-colors">Schedule</a>
-                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="hover:text-primary transition-colors">Register</a>
-                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+    <!-- Enhanced Header -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="font-orbitron text-lg sm:text-xl font-bold text-primary tracking-wider logo-hover">
+                <a href="index.html">GILBERTRONIX'2K25</a>
+            </h1>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-2 lg:space-x-6 text-secondary font-medium">
+                <a href="index.html" class="nav-link active text-primary">Home</a>
+                <a href="about.html" class="nav-link hover:text-primary">About</a>
+                <a href="events.html" class="nav-link hover:text-primary">Events</a>
+                <a href="schedule.html" class="nav-link hover:text-primary">Schedule</a>
+                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="nav-link hover:text-primary" target="_blank">Register</a>
+                <a href="contact.html" class="nav-link hover:text-primary">Contact</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-primary">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            
+            <!-- Enhanced Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden mobile-menu-btn focus:outline-none" aria-label="Toggle mobile menu">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-black/80 backdrop-blur-lg absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0 transition-all duration-300">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4 text-center">
-                <a href="#about" class="hover:text-primary transition-colors mobile-link py-2">About</a>
-                <a href="#events" class="hover:text-primary transition-colors mobile-link py-2">Events</a>
-                <a href="#schedule" class="hover:text-primary transition-colors mobile-link py-2">Schedule</a>
-                <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="hover:text-primary transition-colors mobile-link py-2">Register</a>
-                <a href="#contact" class="hover:text-primary transition-colors mobile-link py-2">Contact</a>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden mobile-menu absolute top-full left-0 w-full transform -translate-y-full -z-10 opacity-0 transition-all duration-300 ease-out">
+            <div class="container mx-auto px-6 py-6">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-menu-link active text-primary mobile-link">
+                        <span class="block">🏠 Home</span>
+                    </a>
+                    <a href="about.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">ℹ️ About</span>
+                    </a>
+                    <a href="events.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">🎯 Events</span>
+                    </a>
+                    <a href="schedule.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📅 Schedule</span>
+                    </a>
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" class="mobile-menu-link hover:text-primary mobile-link" target="_blank">
+                        <span class="block">📝 Register</span>
+                    </a>
+                    <a href="contact.html" class="mobile-menu-link hover:text-primary mobile-link">
+                        <span class="block">📞 Contact</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile CTA -->
+                <div class="mt-6 pt-4 border-t border-cyan-400/20">
+                    <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-lg hover:shadow-cyan-500/25">
+                        🚀 Register Now - ₹250
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -210,95 +107,145 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-24 px-4 container mx-auto relative z-10">
-            <div class="max-w-5xl mx-auto elegant-card reveal">
-                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left">
-                         <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">About The Symposium</h2>
-                         <p class="text-lg text-secondary leading-relaxed">
-                            GILBERTRONIX'2K25 is a premier National Level Technical Symposium by the Dept. of EEE at P.S.R. Engineering College. It's a dynamic platform for students to showcase technical prowess, engage in stimulating competitions, and connect with peers from across the nation. Join us for a day of innovation, learning, and celebration.
-                         </p>
-                    </div>
-                    <div class="flex justify-center">
-                         <img src="broucher.png" alt="GILBERTRONIX'2K25 Event Brochure" class="rounded-xl shadow-2xl w-full max-w-sm">
-                    </div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Events Section -->
-        <section id="events" class="py-24 px-4 relative z-10">
-            <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold text-center mb-20 text-glow reveal">Symposium Events</h2>
-            <div class="container mx-auto">
-                <div class="mb-20 reveal">
-                    <h3 class="font-orbitron text-3xl font-semibold text-center mb-12 text-primary">🎯 Technical Events</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Impulse Hub</h4><p class="text-secondary">Paper Presentation</p></div>
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Ohm Quest</h4><p class="text-secondary">Tech Quiz</p></div>
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2 1m0 0l-2-1m2 1v2.5M3 12l2-1m0 0l2 1m-2-1v-2.5M3 16l2-1m0 0l2 1m-2-1v-2.5M9 19l2-1m0 0l2 1m-2-1v-2.5M15 19l2-1m0 0l2 1m-2-1v-2.5M12 6.253v1.624a3.375 3.375 0 00-3.375-3.375H8.375a3.375 3.375 0 00-3.375 3.375v1.875c0 1.86-1.515 3.375-3.375 3.375H1.625c-1.86 0-3.375-1.515-3.375-3.375V12c0-1.86 1.515-3.375 3.375-3.375h.25c1.86 0 3.375-1.515 3.375-3.375V6.625c0-1.86 1.515-3.375 3.375-3.375h1.25c1.86 0 3.375 1.515 3.375 3.375V8.5" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Creator's Corner</h4><p class="text-secondary">Project Expo</p></div>
-                    </div>
-                </div>
-
-                <div class="reveal">
-                    <h3 class="font-orbitron text-3xl font-semibold text-center mb-12 text-primary">🎭 Non-Technical Events</h3>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Cinema Cipher</h4><p class="text-secondary">Movie Based</p></div>
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V8a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Memory Matrix</h4><p class="text-secondary">Memory Game</p></div>
-                        <div class="elegant-card p-8 text-center interactive-card"><div class="text-cyan-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a14.98 14.98 0 00-5.84-2.56m0 0a14.98 14.98 0 00-5.84 2.56m5.84-2.56V4.72a6 6 0 0111.68 0v2.22m-11.68 4.82a14.983 14.983 0 01-5.84-2.56M3.41 14.37a6 6 0 015.84 7.38v-4.82" /></svg></div><h4 class="font-orbitron text-2xl font-bold text-primary mb-3">Silent Signals</h4><p class="text-secondary">Dumb Charades</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section id="schedule" class="py-24 px-4 relative z-10">
-            <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold text-center mb-20 text-glow reveal">Event Schedule</h2>
-            <div class="container mx-auto max-w-2xl">
-                <div class="relative border-l-2 border-white/10 ml-5">
-                    <div class="space-y-12">
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">9:00 AM - 9:30 AM</p><h4 class="text-xl font-bold">Registration</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">9:30 AM - 10:10 AM</p><h4 class="text-xl font-bold">Inaugural Function</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">10:10 AM - 10:40 AM</p><h4 class="text-xl font-bold">Tea Break</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">10:40 AM - 1:00 PM</p><h4 class="text-xl font-bold">Technical Events</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">1:00 PM - 2:00 PM</p><h4 class="text-xl font-bold">Lunch Break</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">2:00 PM - 3:00 PM</p><h4 class="text-xl font-bold">Non-Technical Events</h4></div>
-                        <div class="pl-12 timeline-item reveal"><p class="font-orbitron text-lg text-secondary mb-1">3:00 PM - 3:30 PM</p><h4 class="text-xl font-bold">Valedictory Function</h4><p class="text-secondary">Prize Distribution & Closing Ceremony</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Register Section -->
-        <section id="register" class="py-24 px-4 relative z-10">
-            <div class="container mx-auto max-w-3xl text-center">
-                <div class="elegant-card reveal">
-                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Join Us</h2>
-                    <p class="text-lg text-secondary leading-relaxed max-w-xl mx-auto mb-8">
-                        Ready to be a part of GILBERTRONIX'2K25? Secure your spot now. The last date for registration is October 6, 2025.
-                    </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center reveal" style="transition-delay: 600ms;">
                     <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="btn-elegant text-lg uppercase">
                         Register Now
                     </a>
-                    <p class="text-secondary mt-4">Registration Fee: ₹250/-</p>
+                    <a href="events.html" class="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-8 rounded-full transition-all duration-300 text-lg uppercase">
+                        View Events
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-24 px-4 relative z-10">
-            <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold text-center mb-12 text-glow reveal">Contact Us</h2>
-            <div class="container mx-auto max-w-5xl text-center grid md:grid-cols-2 gap-8">
-                <div class="elegant-card p-8 reveal"><h3 class="font-orbitron text-2xl font-bold text-primary mb-4">Faculty Coordinators</h3><p class="text-secondary">Dr. A. Geetha M.E, Ph.D</p><p class="text-secondary">Mr. S. Ramaraj M.E.,</p><p class="text-secondary">Mr. P. Sarath Chandran M.E.,</p></div>
-                <div class="elegant-card p-8 reveal"><h3 class="font-orbitron text-2xl font-bold text-primary mb-4">Student Coordinators</h3><p class="text-secondary">Mr. E. Dharanivasan</p><p class="text-secondary">Mr. B. Vishva</p><p class="text-secondary">Ms. P. Madhumathi</p></div>
+        <!-- Quick Overview Section -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="font-orbitron text-3xl md:text-4xl font-extrabold text-center mb-16 text-glow reveal">Why GILBERTRONIX'2K25?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Innovation -->
+                    <div class="elegant-card p-8 text-center reveal">
+                        <div class="text-cyan-400 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-orbitron text-2xl font-bold text-primary mb-4">Innovation Hub</h3>
+                        <p class="text-secondary">Showcase your technical prowess and innovative ideas in cutting-edge competitions.</p>
+                    </div>
+
+                    <!-- Networking -->
+                    <div class="elegant-card p-8 text-center reveal">
+                        <div class="text-cyan-400 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-orbitron text-2xl font-bold text-primary mb-4">National Network</h3>
+                        <p class="text-secondary">Connect with brilliant minds from engineering colleges across the nation.</p>
+                    </div>
+
+                    <!-- Excellence -->
+                    <div class="elegant-card p-8 text-center reveal">
+                        <div class="text-cyan-400 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-orbitron text-2xl font-bold text-primary mb-4">Excellence Awards</h3>
+                        <p class="text-secondary">Compete for prestigious prizes and recognition in technical and fun events.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-center mt-12 max-w-2xl mx-auto reveal">
-                 <p class="text-lg text-secondary">For queries, email us or follow our Instagram.</p>
-                 <a href="mailto:gilbertronix2k25@gmail.com" class="text-primary text-xl hover:underline">gilbertronix2k25@gmail.com</a>
-                 <p class="text-lg mt-4 text-secondary">Phone: <span class="text-primary font-semibold">6262676775, 7010160315</span></p>
+        </section>
+
+        <!-- Event Highlights -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="font-orbitron text-3xl md:text-4xl font-extrabold text-center mb-16 text-glow reveal">Event Highlights</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <div class="elegant-card p-8">
+                            <h3 class="font-orbitron text-2xl font-bold text-primary mb-6">📅 Event Details</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="text-secondary">Date:</span>
+                                    <span class="text-primary font-semibold">October 8, 2025</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-secondary">Time:</span>
+                                    <span class="text-primary font-semibold">9:00 AM - 3:30 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-secondary">Registration Fee:</span>
+                                    <span class="text-primary font-semibold">₹250/-</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-secondary">Last Date:</span>
+                                    <span class="text-primary font-semibold">October 6, 2025</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-secondary">Total Events:</span>
+                                    <span class="text-primary font-semibold">6</span>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                                <a href="schedule.html" class="bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
+                                    View Schedule
+                                </a>
+                                <a href="contact.html" class="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="elegant-card p-8">
+                            <h3 class="font-orbitron text-2xl font-bold text-primary mb-6">🏆 Competition Categories</h3>
+                            <div class="space-y-4">
+                                <div class="bg-black/30 rounded-lg p-4">
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Technical Events</h4>
+                                    <p class="text-sm text-secondary">Impulse Hub • Ohm Quest • Creator's Corner</p>
+                                </div>
+                                <div class="bg-black/30 rounded-lg p-4">
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Non-Technical Events</h4>
+                                    <p class="text-sm text-secondary">Cinema Cipher • Memory Matrix • Silent Signals</p>
+                                </div>
+                                <div class="bg-black/30 rounded-lg p-4">
+                                    <h4 class="font-semibold text-cyan-400 mb-2">What's Included</h4>
+                                    <p class="text-sm text-secondary">Lunch • Refreshments • Certificates • Prizes</p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <a href="events.html" class="btn-elegant w-full text-center">
+                                    Explore All Events
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-4 relative z-10">
+            <div class="container mx-auto max-w-3xl text-center">
+                <div class="elegant-card reveal">
+                    <h2 class="font-orbitron text-4xl md:text-5xl font-extrabold mb-6 text-glow">Ready to Join?</h2>
+                    <p class="text-lg text-secondary leading-relaxed max-w-xl mx-auto mb-8">
+                        Don't miss this incredible opportunity to showcase your talents, learn from peers, and be part of something amazing.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://forms.gle/rjUDnC2gKMeU31q19" target="_blank" class="btn-elegant text-lg uppercase">
+                            Register Now - ₹250
+                        </a>
+                        <a href="about.html" class="bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full transition-all duration-300 text-lg uppercase">
+                            Learn More
+                        </a>
+                    </div>
+                    <p class="text-secondary mt-6 text-sm">Registration closes on October 6, 2025</p>
+                </div>
             </div>
         </section>
     </main>
@@ -315,144 +262,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // --- 3D Globe Background ---
-            let scene, camera, renderer, globe, stars;
-            let mouseX = 0, mouseY = 0;
-            const windowHalfX = window.innerWidth / 2;
-            const windowHalfY = window.innerHeight / 2;
-
-            function initGlobe() {
-                const canvas = document.getElementById('bg-globe');
-                scene = new THREE.Scene();
-                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                camera.position.z = 2.5;
-
-                renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-                // Globe
-                const globeGeometry = new THREE.SphereGeometry(1, 32, 32);
-                const globeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ffff, wireframe: true, transparent: true, opacity: 0.15 });
-                globe = new THREE.Mesh(globeGeometry, globeMaterial);
-                scene.add(globe);
-
-                // Stars
-                const starVertices = [];
-                for (let i = 0; i < 10000; i++) {
-                    const x = (Math.random() - 0.5) * 2000;
-                    const y = (Math.random() - 0.5) * 2000;
-                    const z = (Math.random() - 0.5) * 2000;
-                    if(Math.sqrt(x*x + y*y + z*z) > 100) starVertices.push(x, y, z);
-                }
-                const starGeometry = new THREE.BufferGeometry();
-                starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-                const starMaterial = new THREE.PointsMaterial({ color: 0x555555, size: 0.7 });
-                stars = new THREE.Points(starGeometry, starMaterial);
-                scene.add(stars);
-                
-                document.addEventListener('mousemove', onDocumentMouseMove);
-                window.addEventListener('resize', onWindowResize);
-            }
-
-            function onWindowResize() {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
-            }
-
-            function onDocumentMouseMove(event) {
-                mouseX = (event.clientX - windowHalfX) / 100;
-                mouseY = (event.clientY - windowHalfY) / 100;
-            }
-
-            function animateGlobe() {
-                requestAnimationFrame(animateGlobe);
-                
-                globe.rotation.y += 0.0005;
-                
-                camera.position.x += (mouseX - camera.position.x) * 0.05;
-                camera.position.y += (-mouseY - camera.position.y) * 0.05;
-                camera.lookAt(scene.position);
-
-                renderer.render(scene, camera);
-            }
-            
-            initGlobe();
-            animateGlobe();
-
-            // --- UI Interactions ---
-            const countdownDate = new Date('October 8, 2025 09:00:00').getTime();
-            const updateCountdown = () => {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-                if (distance < 0) {
-                    document.getElementById('countdown').innerHTML = `<div class="font-orbitron text-4xl font-bold text-primary">The Event is Live!</div>`;
-                    return;
-                }
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-            };
-            setInterval(updateCountdown, 1000);
-            updateCountdown();
-
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const toggleMenu = () => {
-                mobileMenu.classList.toggle('opacity-0');
-                mobileMenu.classList.toggle('-translate-y-full');
-            };
-            mobileMenuButton.addEventListener('click', toggleMenu);
-            document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('opacity-0')) toggleMenu();
-            }));
-
-            const header = document.getElementById('main-header');
-            window.addEventListener('scroll', () => {
-                header.classList.toggle('header-scrolled', window.scrollY > 50);
-            });
-            
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-            
-            const interactiveCards = document.querySelectorAll('.interactive-card');
-            interactiveCards.forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    const rotateX = -y / 25;
-                    const rotateY = x / 25;
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05) translateY(-8px)`;
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1) translateY(0)';
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
